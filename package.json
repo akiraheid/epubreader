@@ -1,0 +1,7 @@
+{
+  "name": "epubreader",
+  "version": "0.0.1",
+  "dependencies": {
+    "epubjs": "^0.3.85"
+  }
+}
