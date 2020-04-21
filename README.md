@@ -15,6 +15,8 @@ $ npm i
 ## Usage
 Open `index.html` in an Internet browser, select an ePub file, and click `Render`.
 
+Navigate to the previous and next page by using the `←` and `→` arrow keys, respectively.
+
 ## Thanks
 Thanks to these open source libraries for existing
 * [jQuery](https://jquery.com/)
