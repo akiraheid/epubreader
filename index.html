@@ -3,10 +3,15 @@
 		<script src="./node_modules/epubjs/dist/epub.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+		<style>#bar{display:table;padding:0;margin:0 auto;}</style>
 	</head>
 	<body>
-		<input id="select" type="file" accept=".epub">
-		<button id="render">Render</button>
+		<div>
+			<div id="bar">
+				<input id="select" type="file" accept=".epub">
+				<button id="render">Render</button>
+			</div>
+		</div>
 		<div id="area"></div>
 		<script>
 			$('#render').click(() => {
@@ -17,7 +22,9 @@
 				const reader = new FileReader();
 				reader.onload = function(e) {
 					const book = ePub(file)
-					const rendition = book.renderTo('area', { height: 800, width: 800 })
+					const rendition = book.renderTo('area',
+						{ height: '80%', width: '100%' })
+
 					const displayed = rendition.display()
 
 					$('#next').on('click', (e) => {
